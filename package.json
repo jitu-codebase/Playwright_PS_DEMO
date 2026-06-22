@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rimraf screenshots test-results playwright-report",
     "test": "npm run clean && playwright test",
-    "debug": "npm run clean && playwright test --debug"
+    "debug": "npm run clean && playwright test --debug",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
