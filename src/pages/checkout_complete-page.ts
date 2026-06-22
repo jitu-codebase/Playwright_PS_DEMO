@@ -1,3 +1,4 @@
+/* Page Object for the Checkout Complete page - verifies the order confirmation message and navigates back to the products page */
 import { Page, expect } from "@playwright/test";
 
 export class CheckOutCompletePage {

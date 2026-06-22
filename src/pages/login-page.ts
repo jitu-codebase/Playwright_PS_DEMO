@@ -1,3 +1,4 @@
+/* Page Object for the Login page - handles filling in credentials and submitting the login form */
 import { Page } from "@playwright/test"
 
 export class LoginPage {

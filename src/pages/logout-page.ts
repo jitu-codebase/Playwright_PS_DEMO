@@ -1,3 +1,4 @@
+/* Page Object for the Logout flow - opens the burger menu and clicks the logout link to sign out of the application */
 import { Page } from "@playwright/test";
 
 export class LogOutPage {

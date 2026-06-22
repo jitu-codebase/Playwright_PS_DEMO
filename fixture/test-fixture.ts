@@ -1,3 +1,4 @@
+/* Custom Playwright test fixture that initialises and wires up all Page Object instances (LoginPage, InventoryPage, CartPage, etc.) for use across tests */
 import { test as base } from "@playwright/test";
 import { LoginPage } from "../src/pages/login-page"
 import { InventoryPage } from "../src/pages/inventory-page";

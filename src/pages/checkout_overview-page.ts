@@ -1,3 +1,4 @@
+/* Page Object for the Checkout Overview page - handles reading order details, calculating and validating the total price including tax, and finishing the purchase */
 import { Page, expect } from "@playwright/test";
 import { TestContext } from "../utils/test-context";
 

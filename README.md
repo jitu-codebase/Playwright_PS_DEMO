@@ -1,4 +1,7 @@
-======================== Author: Jitendra Vishwakarma ========================
+/*@Author: Jitendra Vishwakarma 
+@created:2026-06-22
+@updated:2026-06-22
+*/
 # 🎭 Playwright PS Demo
 
 A **TypeScript-based UI Test Automation Framework** built with [Playwright](https://playwright.dev/), following the **Page Object Model (POM)** design pattern. This framework automates end-to-end tests against the [SauceDemo](https://www.saucedemo.com) web application.

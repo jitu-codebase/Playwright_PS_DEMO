@@ -1,3 +1,4 @@
+/* Page Object for the Inventory (Products) page - handles listing prices, adding min/max priced items to cart, and sorting products */
 import { Page, expect } from "@playwright/test"
 import { Helper } from "../utils/helper";
 import { TestContext } from "../utils/test-context";

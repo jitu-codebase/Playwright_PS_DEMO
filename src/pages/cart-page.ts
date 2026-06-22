@@ -1,3 +1,4 @@
+/* Page Object for the Cart page - handles reading cart item details, removing items, and navigating to checkout */
 import { Page } from "@playwright/test";
 
 export class CartPage {

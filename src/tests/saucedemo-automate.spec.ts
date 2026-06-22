@@ -1,3 +1,4 @@
+/* End-to-end test suite for SauceDemo covering: login, cart add/remove, product sorting, and full purchase checkout flow */
 import { expect, test } from "../../fixture/test-fixture";
 import { Helper } from "../utils/helper";
 import { randomUserData } from "../testdata/user-data";

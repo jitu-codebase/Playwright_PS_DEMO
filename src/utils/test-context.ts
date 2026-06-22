@@ -1,4 +1,4 @@
-
+/* Shared in-memory key-value store used to pass data (e.g. selected product names and prices) between test steps within the same test run */
 export class TestContext {
     private contextData: Record<string, any> = {};
 

@@ -1,4 +1,4 @@
-
+/* Generates random user data (first name, last name, postal code) using Faker.js for use in checkout form tests */
 import { faker } from "@faker-js/faker";
 import { userData } from "../types/user-info"
 

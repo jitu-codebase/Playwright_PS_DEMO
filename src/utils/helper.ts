@@ -1,4 +1,4 @@
-
+/* Utility class providing static helper methods for finding min/max price indices and verifying product sort order */
 export class Helper {
 
     static getIndexOfMinMaxPriceOfItems(...prices: number[]) {

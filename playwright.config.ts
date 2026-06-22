@@ -1,3 +1,4 @@
+/* Playwright configuration file - defines test directory, browser settings, parallelism, retries, reporter, and base URL for the test suite */
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 

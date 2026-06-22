@@ -1,3 +1,4 @@
+/* Page Object for the Checkout User Info page - handles filling in first name, last name, and postal code before proceeding to order overview */
 import { Page } from "@playwright/test"
 import { userData } from '../types/user-info'
 
