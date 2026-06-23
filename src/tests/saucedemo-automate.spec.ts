@@ -13,17 +13,17 @@ test.afterEach(async ({ page }, testInfo) => {
     await page.close();
 })
 
-test.describe("Automating Sauce Demo Websites E2E for PS_Demo", () => {
-    test('Exercise 1: Automating a Login Flow', { tag: "@Sanity" }, async ({ page, inventroyPage }) => {
+test.describe("Automating Sauce Demo Websites E2E for PS_Demo", { tag: "@e2e" }, () => {
+    test('Exercise 1: Automating a Login Flow', { tag: "@regression" }, async ({ page, inventoryPage }) => {
         console.log('✅ Logged in successfully')
         await page.screenshot({ path: `screenshots/login-${Date.now()}.png` })
         console.log('✅ Screenshot captured successfully of login')
-        await inventroyPage.verifyInventoryPageIsLoaded();
+        await inventoryPage.verifyInventoryPageIsLoaded();
     })
 
-    test('Exercise 2: Add and Remove Items from Cart', { tag: "@Sanity" }, async ({ inventroyPage, testContext, cartPage, logOutPage }) => {
-        await inventroyPage.addMinAndMaxPriceItemsToCart();
-        await inventroyPage.clickOnCartButton();
+    test('Exercise 2: Add and Remove Items from Cart', { tag: "@regression" }, async ({ inventoryPage, testContext, cartPage, logOutPage }) => {
+        await inventoryPage.addMinAndMaxPriceItemsToCart();
+        await inventoryPage.clickOnCartButton();
         const { itemsNames, itemPrices } = await cartPage.getCartItemsDetails();
         expect(itemsNames).toEqual(testContext.get<string[]>("ProductText"))
         expect(itemPrices).toEqual(testContext.get<number[]>("Prices"))
@@ -35,8 +35,8 @@ test.describe("Automating Sauce Demo Websites E2E for PS_Demo", () => {
         await logOutPage.logOut();
     })
 
-    test('Exercise 3: Filtering and Sorting Products', { tag: "@Sanity" }, async ({ page, inventroyPage, testContext, logOutPage }) => {
-        await inventroyPage.sortProducts();
+    test('Exercise 3: Filtering and Sorting Products', { tag: "@regression" }, async ({ page, inventoryPage, testContext, logOutPage }) => {
+        await inventoryPage.sortProducts();
         const ItemPrices = testContext.get<number[]>("ItemPrices")
         Helper.verifyItemsAreSorted(ItemPrices)
         console.log(`✅ Products are sorted`);
@@ -45,10 +45,10 @@ test.describe("Automating Sauce Demo Websites E2E for PS_Demo", () => {
         await logOutPage.logOut();
     })
 
-    test('Exercise 4: Completing a Purchase', { tag: "@Sanity" }, async ({ page, logOutPage, cartPage, inventroyPage,
+    test('Exercise 4: Completing a Purchase', { tag: "@regression" }, async ({ page, logOutPage, cartPage, inventoryPage,
         testContext, checkoutUserInfoPage, checkoutOverviewPage, checkOutCompletePage }) => {
-        await inventroyPage.addMinAndMaxPriceItemsToCart();
-        await inventroyPage.clickOnCartButton();
+        await inventoryPage.addMinAndMaxPriceItemsToCart();
+        await inventoryPage.clickOnCartButton();
         await cartPage.clickCheckoutButton();
         await checkoutUserInfoPage.addUserDetailsForCheckout(randomUserData());
         await checkoutUserInfoPage.clickContinueBtn();

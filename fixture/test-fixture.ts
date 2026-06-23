@@ -11,7 +11,7 @@ import { CheckOutCompletePage } from "../src/pages/checkout_complete-page";
 
 export const test = base.extend<{
     loginPage: LoginPage;
-    inventroyPage: InventoryPage;
+    inventoryPage: InventoryPage;
     testContext: TestContext;
     cartPage: CartPage;
     logOutPage: LogOutPage;
@@ -22,7 +22,7 @@ export const test = base.extend<{
     loginPage: async ({ page }, use) => {
         await use(new LoginPage(page));
     },
-    inventroyPage: async ({ page, testContext }, use) => {
+    inventoryPage: async ({ page, testContext }, use) => {
         await use(new InventoryPage(page, testContext));
     },
     testContext: async ({ }, use) => {
